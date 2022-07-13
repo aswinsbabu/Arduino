@@ -1,3 +1,6 @@
+//Binary LED
+//Author Aswin S Babu
+
 int led1=10, led2=11, pin, led_pin;
 
 // function declaration
