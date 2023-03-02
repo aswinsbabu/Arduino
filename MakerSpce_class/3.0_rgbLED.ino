@@ -1,5 +1,5 @@
 //Arduino class
-//2.1_analogPWM_gradual_incNdec
+//3.0_rgbLED 
 // the setup function runs once when you press reset or power the board
 int red=3, blue=5, green=6;
 void setup() {
@@ -10,6 +10,8 @@ void setup() {
 // the loop function runs over and over again forever
 void loop() {
   int x=0,y=0,z=0;
+
+  //RED led
     while(x<256 ){//loop to gradually increase brightness in steps
       analogWrite(red, x);   // 
       delay(500);                       // wait for a second
@@ -27,10 +29,10 @@ void loop() {
       y=y+50;
     }
 
-    digitalWrite(blue, 0);
-    //digitalWrite(red, 0);
-     //Green Led
-     y=0;
+    digitalWrite(blue, 0);// stop blue led
+   
+     //Green Led 
+     y=0;//reset y to zero
      while(y<256 ){//loop to gradually increase brightness in steps
       analogWrite(green, y);   // 
       delay(500);                       // wait for a second
