@@ -1,3 +1,4 @@
+//Interface Ultrasonic, read distance, led blink if close proximitty
 //https://docs.google.com/document/d/1JWNRUiD_racqGxvGGi5lnQidfX7YnwMcpfdAG1xAAtY/edit#heading=h.5d84nozaucbe 
 int trigPin = 9;
 int echoPin = 10;
