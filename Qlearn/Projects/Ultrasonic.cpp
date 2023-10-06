@@ -1,5 +1,5 @@
 //Vaccum Cleaner project
-#include <NewPing.h> //for ultrasonic sensor
+//#include <NewPing.h> //for ultrasonic sensor
 #define R_TRIG_PIN   2 // Trig pin of Right sensor 
 #define R_ECHO_PIN   3    // Echo pin of Right sensor 
 #define F_TRIG_PIN   4 // Trig pin of Front sensor 
@@ -27,8 +27,8 @@ void loop() {
 calculate_distance()
 }
 
-int calculate_distance() {
-  int trigPin =
+int calculate_distance(int trigPin, int echoPin) {
+  //int trigPin =
   long duration, distance; //long integer
   digitalWrite(trigPin,HIGH);
   delayMicroseconds(1000);
@@ -38,4 +38,5 @@ int calculate_distance() {
   Serial.print(distance);
   Serial.println("CM");
   delay(10);
+return(distance);
 }
