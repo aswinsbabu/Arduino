@@ -24,7 +24,9 @@ Serial.begin(9600);
 
 void loop() {
   // put your main code here, to run repeatedly:
-calculate_distance()
+Dist2ObstacleFront=calculate_distance();
+Dist2ObstacleRight=calculate_distance();
+Dist2ObstacleLeft=calculate_distance();
 }
 
 int calculate_distance(int trigPin, int echoPin) {
