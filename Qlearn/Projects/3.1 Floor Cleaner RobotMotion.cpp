@@ -1,4 +1,4 @@
-//3.10 Vaccum Cleaner project
+//3.11 Vaccum Cleaner project
 /*Adding motor motion Function
 Displayed all ultrasonic sensor values
 
@@ -53,9 +53,11 @@ void loop() {
   Dist2ObstacleLeft=calculate_distance(L_TRIG_PIN,L_ECHO_PIN);
   if(Dist2ObstacleFront>20){ // Move forward
     move_robotFrwd();
+delay(500);
   }
   else if (Dist2ObstacleFront<20 &&  Dist2ObstacleRight>20 ){ // Move right
     move_robotRight();
+delay(500);
   
   }
   else if (Dist2ObstacleFront<20 &&  Dist2ObstacleLeft>20 ){ // Move Left
@@ -104,7 +106,8 @@ digitaWrite(LeftMtrInput2, Low);
 
 digitaWrite(RightMtrInput1, High);
 digitaWrite(RightMtrInput2, Low);
-analogWrite(
+analogWrite(LeftMtrEnable, 150);
+analogWrite(RightMtrEnable,150);
 }
 
 void move_robotRight(){
@@ -115,4 +118,6 @@ digitaWrite(LeftMtrInput2, Low);
 void move_robotLeft(){
   
 }
+
+
 //////////////////////////////
