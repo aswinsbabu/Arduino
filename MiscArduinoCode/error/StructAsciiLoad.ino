@@ -11,10 +11,10 @@ void setup() {
     Serial.begin(9600);
 
     // Assign values
-    array[0][0] = {42, 'A'};
-    array[0][1] = {27, 'B'};
-    array[1][0] = {33, 'C'};
-    array[1][1] = {99, 'D'};
+    array[0][0] = {65, 'A'};
+    array[0][1] = {66, 'B'};
+    array[1][0] = {67, 'C'};
+    array[1][1] = {68, 'D'};
 
     // Print values
     for (int i = 0; i < 2; i++) {
