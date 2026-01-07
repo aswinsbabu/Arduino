@@ -15,7 +15,7 @@ void setup() {
   display.clear();
 
   display.print('!');
-  display.print(F("\"#$%&'()*+,-./"));
+  display.print(F("\"#$%&'()*+,-./")); //The F() macro to Keep the string in flash memory and don't copy it to RAM."
   display.setCaret(10, 10);
   display.setScale(2);
   display.print(F("0123456789"));
